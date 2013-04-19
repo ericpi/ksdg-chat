@@ -1,4 +1,5 @@
 var http = require("http");
+var port = process.env.PORT || 8080; 
 
 var userList = { };
 var userID = 0; 
@@ -96,6 +97,6 @@ http.createServer(function (req, resp) {
     req.on("data", function(chunk) {
         postData+=chunk;
     });
-}).listen(8080, function() {
+}).listen(port, function() {
     console.log("[" + (new Date).toLocaleTimeString() + "] server start!" );
 });
