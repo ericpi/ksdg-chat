@@ -32,6 +32,7 @@ $(function () {
 
     if(userID != -1) {
         $("#msgBox").css("display", "block");
+        $("#logoutBtn").css("display", "block");
         $("#msgBox").append("<p class=\"text-success\">["+(new Date).toLocaleTimeString()+"] Chatroom start!</p>");
         $("#userInput").focus();
         $("#actBtn").html("Send");
